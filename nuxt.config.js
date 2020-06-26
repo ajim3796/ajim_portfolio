@@ -86,13 +86,13 @@ export default {
     routes() {
       return Promise.all([
         client.getEntries({
-          'content_type': 'work'
+          content_type: 'work'
         }),
         client.getEntries({
-          'content_type': 'category'
+          content_type: 'category'
         }),
         client.getEntries({
-          'content_type': 'tag'
+          content_type: 'tag'
         })
       ]).then(([works, categories, tags]) => {
         return [

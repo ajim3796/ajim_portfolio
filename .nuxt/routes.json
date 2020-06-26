@@ -3,35 +3,30 @@
     "name": "category-id",
     "path": "/category/:id?",
     "component": "D:\\\\Programming\\\\ajim_portfolio\\\\pages\\\\category\\\\_id.vue",
-    "chunkName": "pages/category/_id",
-    "_name": "_03e2631a"
+    "chunkName": "pages/category/_id"
   },
   {
     "name": "search-keyword",
     "path": "/search/:keyword?",
     "component": "D:\\\\Programming\\\\ajim_portfolio\\\\pages\\\\search\\\\_keyword.vue",
-    "chunkName": "pages/search/_keyword",
-    "_name": "_9d8829aa"
+    "chunkName": "pages/search/_keyword"
   },
   {
     "name": "tag-id",
     "path": "/tag/:id?",
     "component": "D:\\\\Programming\\\\ajim_portfolio\\\\pages\\\\tag\\\\_id.vue",
-    "chunkName": "pages/tag/_id",
-    "_name": "_244ae839"
+    "chunkName": "pages/tag/_id"
   },
   {
     "name": "work-slug",
     "path": "/work/:slug?",
     "component": "D:\\\\Programming\\\\ajim_portfolio\\\\pages\\\\work\\\\_slug.vue",
-    "chunkName": "pages/work/_slug",
-    "_name": "_80c590e0"
+    "chunkName": "pages/work/_slug"
   },
   {
     "name": "index",
     "path": "/",
     "component": "D:\\\\Programming\\\\ajim_portfolio\\\\pages\\\\index.vue",
-    "chunkName": "pages/index",
-    "_name": "_0090f96e"
+    "chunkName": "pages/index"
   }
 ]
