@@ -1,3 +1,6 @@
+import { createClient } from "./plugins/contentful.js";
+const client = createClient();
+
 require('dotenv').config()
 
 export default {
