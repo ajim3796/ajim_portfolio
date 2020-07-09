@@ -30,7 +30,7 @@
         {{ work.fields.gitHub }}
       </p>
     </div>
-    <div class="content line-numbers" v-html="$md.render(work.fields.content)"></div>
+    <div class="content" v-html="$md.render(work.fields.content)"></div>
   </div>
 </template>
 
