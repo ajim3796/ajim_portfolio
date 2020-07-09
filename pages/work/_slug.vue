@@ -30,7 +30,7 @@
         {{ work.fields.gitHub }}
       </p>
     </div>
-    <div class="content" v-html="$md.render(work.fields.content)"></div>
+    <div class="content line-numbers" v-html="$md.render(work.fields.content)"></div>
   </div>
 </template>
 
@@ -77,6 +77,7 @@
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { createClient } from "~/plugins/contentful.js";
+import Prism from "~/plugins/prism";
 const client = createClient();
 export default {
   asyncData({ params }) {
@@ -92,6 +93,9 @@ export default {
         };
       })
       .catch(console.error);
+  },
+  mounted() {
+    Prism.highlightAll();
   },
   computed: {
     faLink() {

@@ -44,7 +44,8 @@ export default {
   */
   plugins: [
     { src: '~plugins/font-awesome', ssr: false },
-    'plugins/contentful'
+    '~plugins/contentful',
+    '~/plugins/prism'
   ],
   /*
   ** Auto import components

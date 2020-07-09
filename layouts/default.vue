@@ -5,10 +5,10 @@
         <div class="flex">
           <div class="bg-center bg-cover w-16 h-16 mr-2 rounded-full shadow photo"></div>
           <div>
-            <h1 class="font-bold">Naoki Kondo</h1>
+            <h1 class="font-bold">ajim</h1>
             <p
               class="text-xs text-justify"
-            >エンジニアを目指していますNaoki Kondoです。Vue.js や Nuxt.js はさわり始めたばかりです。Pythonをよく使っています。競技プログラミングもかじっています。</p>
+            >エンジニアを目指しています。Vue.js や Nuxt.js はさわり始めたばかりです。Pythonをよく使っています。競技プログラミングもかじっています。</p>
           </div>
         </div>
         <div class="flex justify-around mt-5 text-xs">
