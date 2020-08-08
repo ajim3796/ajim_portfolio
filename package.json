@@ -15,12 +15,12 @@
     "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/markdownit": "^1.2.10",
     "@nuxtjs/pwa": "^3.0.0-beta.20",
-    "contentful": "^7.14.5",
-    "nuxt": "^2.13.3",
+    "contentful": "^7.14.6",
+    "nuxt": "^2.14.1",
     "nuxt-fontawesome": "^0.4.0",
-    "prismjs": "^1.20.0"
+    "prismjs": "^1.21.0"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^2.1.0"
+    "@nuxtjs/tailwindcss": "^3.0.0"
   }
 }
