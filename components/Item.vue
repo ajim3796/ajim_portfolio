@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full my-3 py-2 bg-white overflow-hidden shadow-lg">
+  <div class="m-3 shadow-lg w-full md:w-2/5">
     <nuxt-link :to=" '/category/' + work.fields.category.sys.id ">
       <div
         class="absolute bg-white py-1 px-3 rounded shadow mt-1 ml-1 text-sm"
@@ -26,6 +26,6 @@
 
 <script>
 export default {
-  props: ["work"]
+  props: ["work"],
 };
 </script>

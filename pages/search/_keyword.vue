@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="flex flex-wrap justify-center">
     <Item v-for="work in works" :key="work.sys.id" :work="work" />
   </div>
 </template>
@@ -10,22 +10,22 @@ import { createClient } from "~/plugins/contentful.js";
 const client = createClient();
 export default {
   components: {
-    Item
+    Item,
   },
   asyncData({ params }) {
     return Promise.all([
       client.getEntries({
         content_type: "work", // 取得対象をworkタイプに限定
         query: params.keyword, // keywordパラメータをいずれかのフィールドに含む記事データのみを抽出
-        order: "-sys.createdAt"
-      })
+        order: "-sys.createdAt",
+      }),
     ])
       .then(([works]) => {
         return {
-          works: works.items // 取得されたデータを配列worksに入れる
+          works: works.items, // 取得されたデータを配列worksに入れる
         };
       })
       .catch(console.error);
-  }
+  },
 };
 </script>

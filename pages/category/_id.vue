@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="flex flex-wrap justify-center">
     <Item v-for="work in works" :key="work.sys.id" :work="work" />
   </div>
 </template>
@@ -10,22 +10,22 @@ import { createClient } from "~/plugins/contentful.js";
 const client = createClient();
 export default {
   components: {
-    Item
+    Item,
   },
   asyncData({ params }) {
     return Promise.all([
       client.getEntries({
         content_type: "work",
         "fields.category.sys.id": params.id,
-        order: "-sys.createdAt"
-      })
+        order: "-sys.createdAt",
+      }),
     ])
       .then(([works]) => {
         return {
-          works: works.items
+          works: works.items,
         };
       })
       .catch(console.error);
-  }
+  },
 };
 </script>
