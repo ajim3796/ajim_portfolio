@@ -1,9 +1,9 @@
 <template>
-  <div>
-    <div
+  <div class="my-6">
+    <!-- <div
       class="h-64 my-6 bg-cover bg-center shadow-lg"
       :style=" 'background-image: url(' + work.fields.image.fields.file.url + ')' "
-    ></div>
+    ></div>-->
     <p class="text-center text-4xl">{{ work.fields.title }}</p>
     <nuxt-link :to=" '/category/' + work.fields.category.sys.id ">
       <p class="text-center text-sm">{{ work.fields.subtitle }}</p>
@@ -16,7 +16,7 @@
         @click="$router.push('/tag/'+tag.sys.id)"
       >{{ tag.fields.name }}</li>
     </div>
-    <div class="content" v-html="$md.render(work.fields.content)"></div>
+    <div class="content w-full" v-html="$md.render(work.fields.content)"></div>
   </div>
 </template>
 

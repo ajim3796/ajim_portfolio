@@ -44,7 +44,7 @@
           />
         </div>
       </header>
-      <main class="px-5 mb-6 w-full lg:w-3/4">
+      <main class="px-5 w-full lg:w-3/4">
         <nuxt />
       </main>
     </div>
