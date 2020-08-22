@@ -102,9 +102,6 @@ button:focus {
   width: 7px;
   height: 0;
 }
-.scroll::-webkit-scrollbar-track {
-  margin: 0 0 2.5rem;
-}
 .scroll::-webkit-scrollbar-thumb {
   background: rgba(0, 0, 0, 0);
   border-radius: 10px;
