@@ -1,5 +1,5 @@
 <template>
-  <div class="my-6">
+  <div>
     <!-- <div
       class="h-64 my-6 bg-cover bg-center shadow-lg"
       :style=" 'background-image: url(' + work.fields.image.fields.file.url + ')' "
@@ -16,7 +16,7 @@
         @click="$router.push('/tag/'+tag.sys.id)"
       >{{ tag.fields.name }}</li>
     </div>
-    <div class="content w-full" v-html="$md.render(work.fields.content)"></div>
+    <div class="content" v-html="$md.render(work.fields.content)"></div>
   </div>
 </template>
 
@@ -39,23 +39,13 @@
   margin: 15px 0;
 }
 .content a {
-  color: blue;
+  color: rgb(68, 125, 190);
+}
+.content a:hover {
+  text-decoration: underline;
 }
 .content li {
   list-style: disc;
-}
-.content code {
-  background: #eee;
-  padding: 0;
-}
-.content pre code {
-  background: none;
-  padding: 0;
-}
-.content pre {
-  background: #000;
-  color: #fff;
-  padding: 5px;
 }
 </style>
 
@@ -63,7 +53,6 @@
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { createClient } from "~/plugins/contentful.js";
-// import Prism from "~/plugins/prism";
 const client = createClient();
 export default {
   asyncData({ params }) {
@@ -79,9 +68,6 @@ export default {
         };
       })
       .catch(console.error);
-  },
-  mounted() {
-    // Prism.highlightAll();
   },
   computed: {
     faLink() {

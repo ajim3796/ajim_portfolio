@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-wrap justify-center">
+  <div class="flex flex-wrap justify-center md:grid md:grid-cols-2 gap-5">
     <Item v-for="work in works" :key="work.sys.id" :work="work" />
   </div>
 </template>
@@ -17,7 +17,7 @@ export default {
       client.getEntries({
         content_type: "work", // 取得対象をworkタイプに限定
         query: params.keyword, // keywordパラメータをいずれかのフィールドに含む記事データのみを抽出
-        order: "-sys.createdAt",
+        order: "-fields.date",
       }),
     ])
       .then(([works]) => {

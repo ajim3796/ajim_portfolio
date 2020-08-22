@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-wrap justify-center">
+  <div class="flex flex-wrap justify-center md:grid md:grid-cols-2 gap-5">
     <Item v-for="work in works" :key="work.sys.id" :work="work" />
   </div>
 </template>
@@ -17,7 +17,7 @@ export default {
       client.getEntries({
         content_type: "work",
         "fields.tag.sys.id": params.id,
-        order: "-sys.createdAt",
+        order: "-fields.date",
       }),
     ])
       .then(([works]) => {
