@@ -37,16 +37,15 @@ export default {
   /*
    ** Global CSS
    */
-  css: ["@fortawesome/fontawesome-svg-core/styles.css"],
+  css: [
+    "@fortawesome/fontawesome-svg-core/styles.css",
+    "~/node_modules/highlight.js/styles/atom-one-light.css"
+  ],
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: [
-    { src: "~plugins/font-awesome", ssr: false },
-    "~plugins/contentful"
-    // '~/plugins/prism'
-  ],
+  plugins: ["~plugins/font-awesome", "~plugins/contentful"],
   /*
    ** Auto import components
    ** See https://nuxtjs.org/api/configuration-components
@@ -63,17 +62,34 @@ export default {
    ** Nuxt.js modules
    */
   modules: [
-    "@nuxtjs/pwa",
+    "@nuxtjs/dotenv",
     "@nuxtjs/markdownit",
-    "nuxt-fontawesome",
-    "@nuxtjs/dotenv"
+    "@nuxtjs/pwa",
+    "nuxt-fontawesome"
   ],
 
   markdownit: {
+    breaks: true,
+    highlight: (str, lang) => {
+      const hljs = require("highlight.js");
+      if (lang && hljs.getLanguage(lang)) {
+        try {
+          return (
+            '<pre class="hljs"><code>' +
+            hljs.highlight(lang, str, true).value +
+            "</code></pre>"
+          );
+        } catch (__) {}
+      }
+      // 言語設定がない場合、プレーンテキストとして表示する
+      return (
+        '<pre class="hljs"><code>' +
+        hljs.highlight("plaintext", str, true).value +
+        "</code></pre>"
+      );
+    },
     html: true,
-    injected: true,
-    linkify: true,
-    breaks: false
+    injected: true
   },
 
   fontawesome: {

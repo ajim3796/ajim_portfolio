@@ -17,7 +17,7 @@ import nuxt_plugin_workbox_524953da from 'nuxt_plugin_workbox_524953da' // Sourc
 import nuxt_plugin_nuxticons_1696de1e from 'nuxt_plugin_nuxticons_1696de1e' // Source: ./nuxt-icons.js (mode: 'all')
 import nuxt_plugin_templatesplugin5c660ea8_245a9f66 from 'nuxt_plugin_templatesplugin5c660ea8_245a9f66' // Source: ./templates.plugin.5c660ea8.js (mode: 'all')
 import nuxt_plugin_markdownit_22494b04 from 'nuxt_plugin_markdownit_22494b04' // Source: ./markdown-it.js (mode: 'all')
-import nuxt_plugin_fontawesome_2e3da388 from 'nuxt_plugin_fontawesome_2e3da388' // Source: ../plugins/font-awesome (mode: 'client')
+import nuxt_plugin_fontawesome_2e3da388 from 'nuxt_plugin_fontawesome_2e3da388' // Source: ../plugins/font-awesome (mode: 'all')
 import nuxt_plugin_contentful_56a1e17b from 'nuxt_plugin_contentful_56a1e17b' // Source: ../plugins/contentful (mode: 'all')
 
 // Component: <ClientOnly>
@@ -191,7 +191,7 @@ async function createApp(ssrContext, config = {}) {
     await nuxt_plugin_markdownit_22494b04(app.context, inject)
   }
 
-  if (process.client && typeof nuxt_plugin_fontawesome_2e3da388 === 'function') {
+  if (typeof nuxt_plugin_fontawesome_2e3da388 === 'function') {
     await nuxt_plugin_fontawesome_2e3da388(app.context, inject)
   }
 
