@@ -2,31 +2,31 @@
   {
     "name": "category-id",
     "path": "/category/:id?",
-    "component": "/home/ajim/Programming/ajim_portfolio/pages/category/_id.vue",
+    "component": "D:\\\\Programming\\\\ajim_portfolio\\\\pages\\\\category\\\\_id.vue",
     "chunkName": "pages/category/_id"
   },
   {
     "name": "search-keyword",
     "path": "/search/:keyword?",
-    "component": "/home/ajim/Programming/ajim_portfolio/pages/search/_keyword.vue",
+    "component": "D:\\\\Programming\\\\ajim_portfolio\\\\pages\\\\search\\\\_keyword.vue",
     "chunkName": "pages/search/_keyword"
   },
   {
     "name": "tag-id",
     "path": "/tag/:id?",
-    "component": "/home/ajim/Programming/ajim_portfolio/pages/tag/_id.vue",
+    "component": "D:\\\\Programming\\\\ajim_portfolio\\\\pages\\\\tag\\\\_id.vue",
     "chunkName": "pages/tag/_id"
   },
   {
     "name": "work-slug",
     "path": "/work/:slug?",
-    "component": "/home/ajim/Programming/ajim_portfolio/pages/work/_slug.vue",
+    "component": "D:\\\\Programming\\\\ajim_portfolio\\\\pages\\\\work\\\\_slug.vue",
     "chunkName": "pages/work/_slug"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "/home/ajim/Programming/ajim_portfolio/pages/index.vue",
+    "component": "D:\\\\Programming\\\\ajim_portfolio\\\\pages\\\\index.vue",
     "chunkName": "pages/index"
   }
 ]

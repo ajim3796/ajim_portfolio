@@ -39,7 +39,7 @@ export default {
    */
   css: [
     "@fortawesome/fontawesome-svg-core/styles.css",
-    "~/node_modules/highlight.js/styles/atom-one-light.css"
+    "~/node_modules/highlight.js/styles/atom-one-dark.css"
   ],
   /*
    ** Plugins to load before mounting the App
