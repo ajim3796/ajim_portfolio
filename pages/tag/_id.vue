@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-wrap justify-center md:grid md:grid-cols-2 gap-5">
+  <div class="flex flex-wrap justify-center grid md:grid-cols-2 gap-5">
     <Item v-for="work in works" :key="work.sys.id" :work="work" />
   </div>
 </template>

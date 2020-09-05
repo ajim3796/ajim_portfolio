@@ -1,10 +1,10 @@
 <template>
   <div class="scroll flex flex-col min-h-screen">
-    <div class="flex flex-grow flex-wrap justify-around container mx-auto">
-      <header class="p-5 w-full lg:w-64">
+    <div class="flex flex-wrap justify-center">
+      <header class="p-5 lg:w-64">
         <div class="flex items-center">
-          <div class="bg-center bg-cover w-16 h-16 mr-2 rounded-full shadow photo"></div>
-          <div>
+          <div class="bg-center bg-cover w-16 h-16 rounded-full shadow photo"></div>
+          <div class="ml-2">
             <h1 class="font-bold">ajim</h1>
             <p
               class="text-xs text-justify"
@@ -42,20 +42,20 @@
           @keypress.enter="$router.push('/search/' + keyword)"
         />
       </header>
-      <main class="p-5 w-full lg:w-8/12">
+      <main class="pt-5 w-full lg:w-8/12 xl:max-w-5xl">
         <nuxt />
       </main>
     </div>
-    <footer class="bg-gray-200 p-2 text-center text-base">
+    <footer class="bg-gray-200 p-2 mt-10 text-center text-base">
       <div>&copy; 2020 ajim</div>
     </footer>
   </div>
 </template>
 
 <script>
+import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faHome } from "@fortawesome/free-solid-svg-icons";
 export default {
   data() {
     return {
@@ -63,23 +63,26 @@ export default {
     };
   },
   computed: {
+    faHome() {
+      return faHome;
+    },
     faTwitter() {
       return faTwitter;
     },
     faGithub() {
       return faGithub;
     },
-    faHome() {
-      return faHome;
-    },
   },
 };
 </script>
 
 <style>
-/* main {
-  max-width: 550px;
-} */
+html {
+  font-family: -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans,
+    sans-serif, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+    "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+}
 .photo {
   min-width: 4rem;
   min-height: 4rem;

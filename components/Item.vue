@@ -2,7 +2,7 @@
   <div class="shadow-lg w-full">
     <nuxt-link :to=" '/category/' + work.fields.category.sys.id ">
       <div
-        class="absolute bg-gray-700 border border-4 border-white font-bold m-2 px-3 py-1 rounded text-white text-sm"
+        class="absolute bg-gray-700 border border-4 border-white m-2 px-3 py-1 rounded text-white text-sm"
       >{{ work.fields.category.fields.name }}</div>
     </nuxt-link>
     <nuxt-link :to=" '/work/' + work.fields.slug ">
@@ -10,7 +10,7 @@
         class="mb-3 w-full h-64 bg-center bg-cover"
         :style=" 'background-image: url(' + work.fields.image.fields.file.url + ')' "
       ></div>
-      <div class="mx-4 font-bold">{{ work.fields.title }}</div>
+      <div class="mx-4">{{ work.fields.title }}</div>
     </nuxt-link>
     <div class="mx-3 my-2 text-xs">{{ work.fields.subtitle }}</div>
     <div class="flex mx-2">
