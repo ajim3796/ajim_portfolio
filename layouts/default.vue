@@ -43,7 +43,7 @@
           @keypress.enter="$router.push('/search/' + keyword)"
         />
       </header>
-      <main class="pt-5 w-full lg:w-8/12 xl:max-w-5xl">
+      <main class="py-5 w-full lg:w-8/12 xl:max-w-5xl">
         <nuxt />
       </main>
     </div>
