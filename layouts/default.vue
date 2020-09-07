@@ -5,7 +5,7 @@
         <div class="flex flex-col">
           <div class="flex items-center">
             <div class="bg-center bg-cover w-16 h-16 rounded-full shadow photo"></div>
-            <h1 class="mx-5 font-bold text-xl">ajim</h1>
+            <h1 class="mx-3 font-bold text-xl">ajim</h1>
           </div>
           <p class="mt-5 text-xs text-justify">
             エンジニアを目指しています。Vue.js や Nuxt.js はさわり始めたばかりです。
