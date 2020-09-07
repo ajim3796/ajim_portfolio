@@ -89,7 +89,8 @@ export default {
       );
     },
     html: true,
-    injected: true
+    injected: true,
+    use: ["markdown-it-emoji"]
   },
 
   fontawesome: {

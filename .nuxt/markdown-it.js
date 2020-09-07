@@ -22,5 +22,7 @@ export default ({ app }, inject) => {
       );
     },"html":true})
 
+  md.use(handlePlugin(require('markdown-it-emoji')))
+
   inject('md', md)
 }
