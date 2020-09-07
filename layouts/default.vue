@@ -2,14 +2,15 @@
   <div class="scroll flex flex-col min-h-screen">
     <div class="flex flex-wrap justify-center">
       <header class="p-5 lg:w-64">
-        <div class="flex items-center">
-          <div class="bg-center bg-cover w-16 h-16 rounded-full shadow photo"></div>
-          <div class="ml-2">
-            <h1 class="font-bold">ajim</h1>
-            <p
-              class="text-xs text-justify"
-            >エンジニアを目指しています。Vue.js や Nuxt.js はさわり始めたばかりです。Pythonをよく使っています。競技プログラミングもかじっています。</p>
+        <div class="flex flex-col">
+          <div class="flex items-center">
+            <div class="bg-center bg-cover w-16 h-16 rounded-full shadow photo"></div>
+            <h1 class="mx-5 font-bold text-xl">ajim</h1>
           </div>
+          <p class="mt-5 text-xs text-justify">
+            エンジニアを目指しています。Vue.js や Nuxt.js はさわり始めたばかりです。
+            Pythonをよく使っています。競技プログラミングもかじっています。
+          </p>
         </div>
         <div class="flex justify-around mt-5 text-xs">
           <nuxt-link to="/">
@@ -37,7 +38,7 @@
         <input
           type="text"
           placeholder="Keywords"
-          class="bg-gray-300 p-2 text-xs rounded w-full mt-5 focus:outline-none"
+          class="p-2 mt-5 bg-gray-300 text-xs rounded w-full focus:outline-none"
           v-model="keyword"
           @keypress.enter="$router.push('/search/' + keyword)"
         />
@@ -46,9 +47,6 @@
         <nuxt />
       </main>
     </div>
-    <footer class="bg-gray-200 p-2 mt-10 text-center text-base">
-      <div>&copy; 2020 ajim</div>
-    </footer>
   </div>
 </template>
 
@@ -90,30 +88,5 @@ html {
 }
 button:focus {
   outline: none;
-}
-.scroll {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  height: 100%;
-  left: 0;
-  right: 2px;
-  width: auto;
-  overflow: scroll;
-}
-.scroll::-webkit-scrollbar {
-  width: 7px;
-  height: 0;
-}
-.scroll::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0);
-  border-radius: 10px;
-  box-shadow: rgba(255, 255, 255, 0.3) 0 0 0 1px;
-}
-.scroll:hover::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.25);
-}
-.scroll::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 0, 0, 0.4);
 }
 </style>
