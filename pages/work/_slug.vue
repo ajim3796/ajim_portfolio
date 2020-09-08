@@ -66,6 +66,9 @@
   padding-right: 0;
   margin: 1.5em 0;
 }
+.content img {
+  margin-top: 1rem;
+}
 </style>
 
 <script>
