@@ -1,11 +1,5 @@
 require("dotenv").config();
 
-const contentful = require("contentful");
-const client = contentful.createClient({
-  space: process.env.CTF_SPACE_ID,
-  accessToken: process.env.CTF_CDA_ACCESS_TOKEN
-});
-
 export default {
   /*
    ** Nuxt rendering mode
@@ -45,7 +39,11 @@ export default {
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: ["~plugins/font-awesome", "~plugins/contentful"],
+  plugins: [
+    "~/plugins/markdownit",
+    "~plugins/contentful",
+    "~plugins/font-awesome"
+  ],
   /*
    ** Auto import components
    ** See https://nuxtjs.org/api/configuration-components
@@ -67,31 +65,6 @@ export default {
     "@nuxtjs/pwa",
     "nuxt-fontawesome"
   ],
-
-  markdownit: {
-    breaks: true,
-    highlight: (str, lang) => {
-      const hljs = require("highlight.js");
-      if (lang && hljs.getLanguage(lang)) {
-        try {
-          return (
-            '<pre class="hljs"><code>' +
-            hljs.highlight(lang, str, true).value +
-            "</code></pre>"
-          );
-        } catch (__) {}
-      }
-      // 言語設定がない場合、プレーンテキストとして表示する
-      return (
-        '<pre class="hljs"><code>' +
-        hljs.highlight("plaintext", str, true).value +
-        "</code></pre>"
-      );
-    },
-    html: true,
-    injected: true,
-    use: ["markdown-it-emoji"]
-  },
 
   fontawesome: {
     component: "fa"
