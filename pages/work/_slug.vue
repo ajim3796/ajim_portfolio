@@ -59,6 +59,13 @@
   font-family: monospace, monospace;
   margin-bottom: 1rem;
 }
+.content blockquote {
+  border-left: 5px solid #ddd;
+  color: #777;
+  padding: 1em;
+  padding-right: 0;
+  margin: 1.5em 0;
+}
 </style>
 
 <script>
