@@ -17,7 +17,7 @@
     "@nuxtjs/markdownit": "^1.2.10",
     "@nuxtjs/pwa": "^3.0.2",
     "contentful": "^7.14.6",
-    "highlight.js": "^10.1.2",
+    "highlight.js": "^10.2.0",
     "markdown-it-emoji": "^1.4.0",
     "nuxt": "^2.14.4",
     "nuxt-fontawesome": "^0.4.0"
