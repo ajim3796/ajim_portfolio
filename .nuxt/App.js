@@ -13,6 +13,8 @@ import '..\\node_modules\\@fortawesome\\fontawesome-svg-core\\styles.css'
 
 import '..\\node_modules\\highlight.js\\styles\\atom-one-dark.css'
 
+import '..\\node_modules\\katex\\dist\\katex.min.css'
+
 import _6f6c098b from '..\\layouts\\default.vue'
 
 const layouts = { "_default": sanitizeComponent(_6f6c098b) }

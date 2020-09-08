@@ -16,7 +16,7 @@ import nuxt_plugin_plugin_6448d7c8 from 'nuxt_plugin_plugin_6448d7c8' // Source:
 import nuxt_plugin_workbox_68e0339b from 'nuxt_plugin_workbox_68e0339b' // Source: .\\workbox.js (mode: 'client')
 import nuxt_plugin_nuxticons_58e46669 from 'nuxt_plugin_nuxticons_58e46669' // Source: .\\nuxt-icons.js (mode: 'all')
 import nuxt_plugin_templatesplugin7b8c3977_5cadcf5a from 'nuxt_plugin_templatesplugin7b8c3977_5cadcf5a' // Source: .\\templates.plugin.7b8c3977.js (mode: 'all')
-import nuxt_plugin_markdownit_69ef6b60 from 'nuxt_plugin_markdownit_69ef6b60' // Source: ..\\plugins\\markdownit (mode: 'all')
+import nuxt_plugin_markdownit_4414248c from 'nuxt_plugin_markdownit_4414248c' // Source: .\\markdown-it.js (mode: 'all')
 import nuxt_plugin_contentful_56a1e17b from 'nuxt_plugin_contentful_56a1e17b' // Source: ..\\plugins\\contentful (mode: 'all')
 import nuxt_plugin_fontawesome_2e3da388 from 'nuxt_plugin_fontawesome_2e3da388' // Source: ..\\plugins\\font-awesome (mode: 'all')
 
@@ -187,8 +187,8 @@ async function createApp(ssrContext, config = {}) {
     await nuxt_plugin_templatesplugin7b8c3977_5cadcf5a(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_markdownit_69ef6b60 === 'function') {
-    await nuxt_plugin_markdownit_69ef6b60(app.context, inject)
+  if (typeof nuxt_plugin_markdownit_4414248c === 'function') {
+    await nuxt_plugin_markdownit_4414248c(app.context, inject)
   }
 
   if (typeof nuxt_plugin_contentful_56a1e17b === 'function') {

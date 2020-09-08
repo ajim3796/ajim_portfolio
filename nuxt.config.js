@@ -33,17 +33,14 @@ export default {
    */
   css: [
     "@fortawesome/fontawesome-svg-core/styles.css",
-    "~/node_modules/highlight.js/styles/atom-one-dark.css"
+    "~/node_modules/highlight.js/styles/atom-one-dark.css",
+    "~/node_modules/katex/dist/katex.min.css"
   ],
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: [
-    "~/plugins/markdownit",
-    "~plugins/contentful",
-    "~plugins/font-awesome"
-  ],
+  plugins: ["~plugins/contentful", "~plugins/font-awesome"],
   /*
    ** Auto import components
    ** See https://nuxtjs.org/api/configuration-components
@@ -68,6 +65,45 @@ export default {
 
   fontawesome: {
     component: "fa"
+  },
+
+  markdownit: {
+    highlight: (str, lang) => {
+      const hljs = require("highlight.js");
+      if (lang && hljs.getLanguage(lang)) {
+        try {
+          return (
+            '<pre class="hljs"><code>' +
+            hljs.highlight(lang, str, true).value +
+            "</code></pre>"
+          );
+        } catch (__) {}
+      }
+      // 言語設定がない場合、プレーンテキストとして表示する
+      return (
+        '<pre class="hljs"><code>' +
+        hljs.highlight("plaintext", str, true).value +
+        "</code></pre>"
+      );
+    },
+    breaks: true,
+    html: true,
+    injected: true,
+    linkify: true,
+    typographer: true,
+    use: [
+      "@iktakahiro/markdown-it-katex",
+      "markdown-it-emoji",
+      [
+        "markdown-it-link-attributes",
+        {
+          attrs: {
+            target: "_new",
+            rel: "noopener"
+          }
+        }
+      ]
+    ]
   },
 
   env: {
