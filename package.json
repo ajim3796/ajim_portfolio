@@ -11,20 +11,19 @@
     "serve": "nuxt serve"
   },
   "dependencies": {
-    "@fortawesome/free-brands-svg-icons": "^5.14.0",
-    "@fortawesome/free-solid-svg-icons": "^5.14.0",
-    "@iktakahiro/markdown-it-katex": "^4.0.0",
+    "@fortawesome/free-brands-svg-icons": "^6.4.0",
+    "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "@iktakahiro/markdown-it-katex": "^4.0.1",
     "@nuxtjs/dotenv": "^1.4.1",
-    "@nuxtjs/markdownit": "^1.2.10",
-    "@nuxtjs/pwa": "^3.0.2",
-    "contentful": "^10.2.3",
-    "highlight.js": "^10.4.1",
-    "markdown-it-emoji": "^1.4.0",
-    "markdown-it-link-attributes": "^3.0.0",
-    "nuxt": "^2.14.5",
-    "nuxt-fontawesome": "^0.4.0"
+    "@nuxtjs/pwa": "^3.3.5",
+    "contentful": "^10.2.4",
+    "markdown-it-emoji": "^2.0.2",
+    "markdown-it-link-attributes": "^4.0.1",
+    "nuxt": "^3.5.3",
+    "nuxt-fontawesome": "^0.4.0",
+    "nuxt-markdownit": "^2.0.0"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^3.0.2"
+    "@nuxtjs/tailwindcss": "^6.8.0"
   }
 }
