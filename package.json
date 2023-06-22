@@ -21,7 +21,7 @@
     "highlight.js": "^10.4.1",
     "markdown-it-emoji": "^1.4.0",
     "markdown-it-link-attributes": "^3.0.0",
-    "nuxt": "^2.14.5",
+    "nuxt": "^2.17.0",
     "nuxt-fontawesome": "^0.4.0"
   },
   "devDependencies": {
