@@ -16,7 +16,7 @@
     "@iktakahiro/markdown-it-katex": "^4.0.1",
     "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/pwa": "^3.3.5",
-    "contentful": "^10.2.4",
+    "contentful": "^10.6.22",
     "markdown-it-emoji": "^2.0.2",
     "markdown-it-link-attributes": "^4.0.1",
     "nuxt": "^3.5.3",
