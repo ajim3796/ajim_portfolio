@@ -19,7 +19,7 @@
     "contentful": "^10.2.4",
     "markdown-it-emoji": "^2.0.2",
     "markdown-it-link-attributes": "^4.0.1",
-    "nuxt": "^3.5.3",
+    "nuxt": "^3.10.3",
     "nuxt-fontawesome": "^0.4.0",
     "nuxt-markdownit": "^2.0.0"
   },
